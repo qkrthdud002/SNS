@@ -1,0 +1,20 @@
+#server.port=8090
+spring.jpa:
+    properties.hibernate.format_sql: true
+    database: postgresql
+    hibernate.dialect: org.hibernate.dilect.PostgreSQLDialect
+    hibernate.ddl-auto: update
+    show-sql: true
+
+spring.datasource:
+    hikari.maximum-pool-size: 4
+    url: jdbc:postgresql://localhost:5432/sns
+    username: postgres
+    password: 1234
+    platform: postgres
+    driver-class-name: org.postgresql.Driver
+
+jwt:
+  secret-key: fast_campus.sns-application-2022.secret_key
+  # 30 days
+  token.expired-time-ms: 2592000000
